@@ -21,7 +21,7 @@
 </head>
 
 <body>
-  <?php $this->load->view('_partials/sidenav') ?>
+  <?php //$this->load->view('_partials/sidenav') ?>
   <!-- Main content -->
   <div class="main-content" id="panel">
     <?php $this->load->view('_partials/topnav') ?>
