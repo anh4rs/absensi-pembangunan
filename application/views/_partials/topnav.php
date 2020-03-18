@@ -33,13 +33,14 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link nav-link-icon" href="#" id="navbar-default_dropdown_1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="ni ni-bullet-list-67"></i>
-                        <span class="nav-link-inner--text d-lg-none">Daftar</span>
+                        <span class="nav-link-inner--text d-lg-none">Pilihan</span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbar-default_dropdown_1">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Input Data Absensi</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                        <a class="dropdown-item" href="#">Lihat Data Absensi</a>
+                         <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Lihat Statistik Kehadiran</a>
                     </div>
                 </li>
             </ul>
@@ -69,12 +70,12 @@
               <div class="dropdown-menu  dropdown-menu-right ">
                 <a href="#!" class="dropdown-item">
                   <i class="ni ni-single-02"></i>
-                  <span>My profile</span>
+                  <span>Profil saya</span>
                 </a>
                 <div class="dropdown-divider"></div>
                 <a  data-toggle="modal" data-target="#logoutModal" href="#!" class="dropdown-item">
                   <i class="ni ni-user-run"></i>
-                  <span>Logout</span>
+                  <span>Keluar</span>
                 </a>
               </div>
             </li>
