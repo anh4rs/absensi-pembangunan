@@ -27,8 +27,12 @@
 
 
 <script type="text/javascript" >
-	$(document).ready( function () {
-	    $('#tabel-absen').DataTable();
+$(document).ready( function () {
+		    
+	    
+	    $('#tabel-absen').DataTable({
+				"ordering":false
+	    });
 	} );
 </script>
 
