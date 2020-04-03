@@ -18,22 +18,11 @@
 
 <script src="<?php echo base_url('assets/vendor/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js')?>"></script>
 
-
-
-  <!-- DataTables -->
-<script type="text/javascript" charset="utf8" src="<?php echo base_url('assets/vendor/datatables/DataTables-1.10.20/js/jquery.dataTables.js')?>"></script>
-<script type="text/javascript" charset="utf8" src="<?php echo base_url('assets/vendor/datatables/DataTables-1.10.20/js/dataTables.bootstrap4.js')?>"></script>
-
-
-
-<script type="text/javascript" >
-$(document).ready( function () {
-		    
-	    
-	    $('#tabel-absen').DataTable({
-				"ordering":false
-	    });
-	} );
+<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+<script>
+	$(document).ready(function(){
+		$(".se-pre-con").fadeOut(2000);
+	});
 </script>
 
 

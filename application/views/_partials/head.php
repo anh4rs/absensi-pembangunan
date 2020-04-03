@@ -21,7 +21,19 @@
 <link rel="stylesheet" href="<?php echo base_url('assets/vendor/@fortawesome/fontawesome-free/css/all.min.css')?>" type="text/css">
   <!-- Argon CSS -->
 <link rel="stylesheet" href="<?php echo base_url('assets/css/argon.css?v=1.2.0')?>" type="text/css">
-  
-  <!-- DataTables -->
-<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/vendor/datatables/DataTables-1.10.20/css/dataTables.bootstrap4.css')?>"/>
-<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/vendor/datatables/DataTables-1.10.20/css/jquery.dataTables.css')?>"/>
+
+<style>
+	.no-js #loader { display: none;  }
+	.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+	.se-pre-con {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url(assets/Preloader_2.gif) center no-repeat #fff;
+}
+</style>  
+<div class="se-pre-con"></div>  
+
