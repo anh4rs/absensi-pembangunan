@@ -11,7 +11,7 @@
 	      <div class="modal-body"></div>
 	      <div class="modal-footer">
 		<button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
-		<a class="btn btn-danger" href="#">Keluar</a>
+		<a class="btn btn-danger" href="<?php echo site_url('logout') ?>">Keluar</a>
 	      </div>
 	    </div>
 	  </div>

@@ -25,7 +25,7 @@
             
             <ul class="navbar-nav ml-lg-auto">    
                 <li class="nav-item">
-                    <a class="nav-link nav-link-icon" href="#">
+                    <a class="nav-link nav-link-icon" href="<?php echo site_url('beranda') ?>">
                         <i class="fas fa-home"></i>
                         <span class="nav-link-inner--text d-lg-none">Dashboard</span>
                     </a>
@@ -36,7 +36,7 @@
                         <span class="nav-link-inner--text d-lg-none">Pilihan</span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbar-default_dropdown_1">
-                        <a class="dropdown-item" href="#">Laporan Data Absensi</a>
+                        <a class="dropdown-item" href="<?php echo site_url('laporan') ?>">Laporan Data Absensi</a>
                          <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#">Lihat Statistik Kehadiran</a>
                     </div>

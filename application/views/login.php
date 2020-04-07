@@ -27,13 +27,14 @@
   </nav>
   <!-- Main content -->
   <div role="main" class="main-content flex-shrink-0">
+
     <!-- Header -->
     <div class="header  pt-7 pt-lg-8 pt-lg-9">
       <div class="container">
+
         <div class="header-body text-center ">
           <div class="row justify-content-center">
             <div class="col-xl-5 col-lg-6 col-md-8 px-5">
-
               <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
  
                 <div class="carousel-inner">
@@ -74,13 +75,13 @@
                   <div class="text-center text-muted mb-4">
                     <small>Login Pengguna</small>
                   </div>
-                  <form role="form">
+                  <form>
                     <div class="form-group mb-3">
                       <div class="input-group input-group-merge input-group-alternative">
                         <div class="input-group-prepend">
                           <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                         </div>
-                        <input class="form-control" placeholder="Nama Pengguna" type="text">
+                        <input class="form-control" id="username" name="username" placeholder="Nama Pengguna" type="text">
                       </div>
                     </div>
                     <div class="form-group">
@@ -88,19 +89,19 @@
                         <div class="input-group-prepend">
                           <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
                         </div>
-                        <input class="form-control" placeholder="Kata Sandi" type="password">
+                        <input class="form-control" name="password" id="password" placeholder="Kata Sandi" type="password">
                       </div>
                     </div>
                     <div class="custom-control custom-control-alternative custom-checkbox">
-                      <input class="custom-control-input" id=" customCheckLogin" type="checkbox">
+                      <input class="custom-control-input"  id=" customCheckLogin" type="checkbox">
                       <label class="custom-control-label" for=" customCheckLogin">
                         <span class="text-muted">Ingat saya</span>
                       </label>
                     </div>
-                    <div class="text-center">
-                      <button type="button" class="btn btn-primary my-4"><i class="fas fa-sign-in-alt"></i> Masuk</button>
-                    </div>
                   </form>
+                    <div class="text-center">
+                      <button   class="btn btn-login btn-primary my-4"><i class="fas fa-sign-in-alt"></i> Masuk</button>
+                    </div>
                   <div class="col-6">
                     <a href="#" class="text-light"><small>Forgot password?</small></a>
                   </div>
@@ -124,12 +125,100 @@
   <script src="<?php echo base_url('assets/vendor/js-cookie/js.cookie.js') ?>"></script>
   <script src="<?php echo base_url('assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js') ?>"></script>
   <script src="<?php echo base_url('assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js') ?>"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/8.11.8/sweetalert2.all.min.js"></script>
+
   <!-- Argon JS -->
   <script src="<?php echo base_url('assets/js/argon.js?v=1.2.0') ?>"></script>
+  <script src="<?php echo base_url('assets/js/jquery.md5.js') ?>"></script>
+
 	<script>
 		$(document).ready(function(){
 			$(".se-pre-con").fadeOut(2000);
-		});
+		  
+
+        $(".btn-login").click( function() {
+
+          var username = $("#username").val();
+          var password = $("#password").val();
+          var enkripsi = $.md5(password);
+
+          if(username.length == "") {
+            Swal.fire({
+              type: 'warning',
+              title: 'Oops...',
+              text: 'Nama Pengguna Wajib Diisi !'
+            });
+
+          } else if(password.length == "") {
+
+            Swal.fire({
+              type: 'warning',
+              title: 'Oops...',
+              text: 'Kata Sandi Wajib Diisi !'
+            });
+
+          } else {
+
+            $.ajax({
+
+              url: "<?php echo site_url('login/cek_login')?>",
+              type: "POST",
+              data: {
+                  "username": username,
+                  "password": enkripsi
+              },
+
+              success:function(response){
+
+                if (response == "success") {
+
+                  Swal.fire({
+                    type: 'success',
+                    title: 'Login Berhasil!',
+                    text: 'Anda akan di arahkan dalam 3 Detik',
+                    timer: 3000,
+                    showCancelButton: false,
+                    showConfirmButton: false
+                  })
+                  .then (function() {
+                    window.location.href = "<?php echo site_url('/beranda')?>";
+                  });
+
+                } else {
+
+                  Swal.fire({
+                    type: 'error',
+                    title: 'Login Gagal!',
+                    text: 'Nama Pengguna atau Kata Sandi salah!'
+                  });
+
+
+                }
+
+                console.log(response);
+
+              },
+
+              error:function(response){
+
+                  Swal.fire({
+                    type: 'error',
+                    title: 'Opps!',
+                    text: 'server error!'
+                  });
+
+                  console.log(response);
+
+              }
+
+            });
+
+          }
+
+        }); 
+
+
+    });
 </script>
 </body>
 

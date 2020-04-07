@@ -191,159 +191,47 @@
                       	L
                     </td>
                     <form>
-                      <td class="m-0 p-1">
-                      	<select class=" form-control-sm" id="test" name="1_1">		
-										  		<option >..</option>
-                          <option value="h">H</option>                     		
-                      		<option value="s">S</option>
-										  		<option value="i">I</option>
-                      		<option value="a">A</option>
-                      		<option value="t">T</option>
-                      		<option value="k">K</option>
-                      	</select> 
+                      <td class="p-0 m-0 text-center">
+                        &#10004;  
                       </td>
-                      <td class="m-0 p-1">
-                      	<select class=" form-control-sm" name="1_2">
-                      		<option >..</option>
-                          <option value="h">H</option>
-                      		<option value="s">S</option>
-                       		<option value="i">I</option>
-                     	  	<option value="a">A</option>
-                     	  	<option value="t">T</option>
-                      		<option value="k">K</option>
-                      	</select> 
+                      <td class="p-0 m-0 text-center">
+                      	&#10004; 
                       </td>
-                      <td class="m-0 p-1">
-                     	  <select class=" form-control-sm" name="1_3">
-                     		 <option >..</option>
-                         <option value="h">H</option>
-                     		 <option value="s">S</option>
-                     		 <option value="i">I</option>
-                     		 <option value="a">A</option>
-                     		 <option value="t">T</option>
-                     		 <option value="k">K</option>
-                     	  </select> 
+                      <td class="p-0 m-0 text-center">
+                     	  &#10004;   
                       </td>
-                      <td class="m-0 p-1">
-                     	  <select class=" form-control-sm" name="1_4">
-                     	  	<option >..</option>
-                          <option value="h">H</option>
-                     	  	<option value="s">S</option>
-                     	  	<option value="i">I</option>
-                     	  	<option value="a">A</option>
-                     	  	<option value="t">T</option>
-                     	  	<option value="k">K</option>
-                     	  </select> 
+                      <td class="p-0 m-0 text-center">
+                     	  &#10004;   
                       </td>
-                      <td class="m-0 p-1">
-                     	  <select class=" form-control-sm" name="1_5">
-                     	  	<option >..</option>
-                          <option value="h">H</option>
-                     	  	<option value="s">S</option>
-                     	  	<option value="i">I</option>
-                     	  	<option value="a">A</option>
-                     	  	<option value="t">T</option>
-                     	  	<option value="k">K</option>
-                     	  </select> 
+                      <td class="p-0 m-0 text-center">
+                     	  &#10004;   
                       </td>
-                      <td class="m-0 p-1">
-                     	  <select class=" form-control-sm" name="1_6">
-                     	    <option >..</option>
-                          <option value="h">H</option>
-                     		  <option value="s">S</option>
-                     	  	<option value="i">I</option>
-                     	  	<option value="a">A</option>
-                     	  	<option value="t">T</option>
-                      		<option value="k">K</option>
-                      	</select> 
+                      <td class="p-0 m-0 text-center">
+                        &#10004;   
                       </td>
-                      <td class="m-0 p-1">
-                     	  <select class=" form-control-sm" name="1_7">
-                     		 <option >..</option>
-                         <option value="h">H</option>
-                     		 <option value="s">S</option>
-                     		 <option value="i">I</option>
-                     		 <option value="a">A</option>
-                     		 <option value="t">T</option>
-                     		 <option value="k">K</option>
-                     	  </select> 
+                      <td class="p-0 m-0 text-center">
+                        &#10004;   
                       </td>
-                      <td class="m-0 p-1">
-                     	  <select class=" form-control-sm" name="1_8">
-                     		 <option >..</option>
-                         <option value="h" >H</option>
-                     		 <option value="s">S</option>
-                     		 <option value="i">I</option>
-                     		 <option value="a">A</option>
-                     		 <option value="t">T</option>
-                     		 <option value="k">K</option>
-                     	  </select> 
+                      <td class="p-0 m-0 text-center">
+                        &#10004;   
                       </td>
-                      <td class="m-0 p-1">
-                     	  <select class=" form-control-sm" name="1_9">
-                     		 <option >..</option>
-                         <option value="h" >H</option>
-                     		 <option value="s">S</option>
-                     		 <option value="i">I</option>
-                     		 <option value="a">A</option>
-                     		 <option value="t">T</option>
-                     		 <option value="k">K</option>
-                     	  </select> 
+                      <td class="p-0 m-0 text-center">
+                        &#10004;   
                       </td>
-                      <td class="m-0 p-1">
-                     	  <select class=" form-control-sm" name="1_10">
-                     		 <option >..</option>
-                         <option value="h" >H</option>
-                     		 <option value="s">S</option>
-                     		 <option value="i">I</option>
-                     		 <option value="a">A</option>
-                     		 <option value="t">T</option>
-                     		 <option value="k">K</option>
-                     	  </select> 
+                      <td class="p-0 m-0 text-center">
+                        &#10004;   
                       </td>
-                      <td class="m-0 p-1">
-                     	  <select class=" form-control-sm" name="1_11">
-                     		 <option >..</option>
-                         <option value="h" >H</option>
-                     		 <option value="s">S</option>
-                     		 <option value="i">I</option>
-                     		 <option value="a">A</option>
-                     		 <option value="t">T</option>
-                     		 <option value="k">K</option>
-                     	  </select> 
+                      <td class="p-0 m-0 text-center">
+                        &#10004;   
                       </td>
-                      <td class="m-0 p-1">
-                     	  <select class=" form-control-sm" name="1_12">
-                     		 <option >..</option>
-                         <option value="h" >H</option>
-                     		 <option value="s">S</option>
-                     		 <option value="i">I</option>
-                     		 <option value="a">A</option>
-                     		 <option value="t">T</option>
-                     		 <option value="k">K</option>
-                     	  </select> 
+                      <td class="p-0 m-0 text-center">
+                        &#10004;   
                       </td>
-                      <td class="m-0 p-1">
-                     	  <select class=" form-control-sm" name="1_13">
-                     		 <option >..</option>
-                         <option value="h" >H</option>
-                     		 <option value="s">S</option>
-                     		 <option value="i">I</option>
-                     		 <option value="a">A</option>
-                     		 <option value="t">T</option>
-                     		 <option value="k">K</option>
-                     	  </select> 
+                      <td class="p-0 m-0 text-center">
+                        &#10004;   
                       </td>
-                      <td class="m-0 p-1">
-                     	  <select class=" form-control-sm" name="1_14">
-                     		 <option >..</option>
-                         <option value="h" >H</option>
-                     		 <option value="s">S</option>
-                     		 <option value="i">I</option>
-                     		 <option value="a">A</option>
-                     		 <option value="t">T</option>
-                     		 <option value="k">K</option>
-                     	  </select> 
+                      <td class="p-0 m-0 text-center">
+                        &#10004;   
                       </td>
                     </form>
                   </tr>

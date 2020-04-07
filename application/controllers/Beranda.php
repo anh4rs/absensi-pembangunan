@@ -9,24 +9,23 @@ class Beranda extends CI_Controller {
 	}
 	public function index()
 	{	
-		//if session = petugas absen 
-		$this->load->view('petugas/beranda');
-		
-		//if session = walikelas
-		//ngeload walikelas/beranda
+		$this->load->model("login_model");
 
-		//if session = siswa
-		//ngeload siswa/beranda
+		//jika tidak  redirect ke halaman login
+		if($this->login_model->tidak_login()) redirect(site_url('login')); 
+
+		//jika login
+		else 
+		{
+			if($this->session->userdata('role') == "petugas") $this->load->view('petugas/beranda');
+			elseif($this->session->userdata('role') == "wali") $this->load->view('petugas/beranda');
+			elseif($this->session->userdata('role') == "siswa") $this->load->view('petugas/beranda');
+			elseif($this->session->userdata('role') == "admin") $this->load->view('petugas/beranda');
+
+		}
+		
 	}
 
 	//sementara
-	public function walikelas()
-	{
-		$this->view('wali/beranda');
-	}
-
-	public function siswa()
-	{
-		$this->view('siswa/beranda');
-	}
+	
 }
