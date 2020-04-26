@@ -6,7 +6,6 @@ class Login extends CI_Controller {
 	public function __construct()
     {
         parent::__construct();
-        $this->load->model("login_model");
         $this->load->library('form_validation');
     }
 
@@ -36,9 +35,10 @@ class Login extends CI_Controller {
 
                 //looping data user
                 $session_data = array(
-                    'id_user'   => $user->id,
+                    'id'   		=> $user->id,
                     'username'  => $user->username,
-                    'role'		=> $user->role
+                    'role'		=> $user->role,
+                    'kelas'		=> $user->kelas
                 );
                 //buat session berdasarkan user yang login
                 $this->session->set_userdata($session_data);

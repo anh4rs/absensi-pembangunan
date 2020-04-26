@@ -32,8 +32,24 @@
 	width: 100%;
 	height: 100%;
 	z-index: 9999;
-	background: url(assets/Preloader_2.gif) center no-repeat #fff;
+	background: url(<?php echo base_url('assets/Preloader_2.gif')?>) center no-repeat #fff;
 }
+
+	@media screen and (min-width: 768px) {
+        .modal-edit {
+          width: 700px; /* New width for default modal */
+        }
+        .modal-kecil {
+          width: 350px; /* New width for small modal */
+        }
+    }
+
+    @media screen and (min-width: 992px) {
+        .modal-gede {
+          width: 950px; /* New width for large modal */
+        }
+    }
+
 </style>  
 <div class="se-pre-con"></div>  
 

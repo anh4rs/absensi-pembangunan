@@ -36,6 +36,8 @@
                         <span class="nav-link-inner--text d-lg-none">Pilihan</span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbar-default_dropdown_1">
+                        <a class="dropdown-item" href="<?php echo site_url('edit') ?>">Edit Data Absensi</a>
+                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="<?php echo site_url('laporan') ?>">Laporan Data Absensi</a>
                          <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#">Lihat Statistik Kehadiran</a>
@@ -58,11 +60,8 @@
                 <div class="media align-items-center">
                   
                   <div class="media-body  mr-2">
-                    <span class="mb-0 text-sm  font-weight-bold">John Snow</span>
+                    <span class="mb-0 text-sm  font-weight-bold"><?php echo $user->nama; ?></span>
                   </div>
-                  <span class="avatar avatar-sm rounded-circle ">
-                    <img alt="Image placeholder" src="../assets/img/theme/team-4.jpg">
-                  </span>
                 </div>
               </a>
               <div class="dropdown-menu  dropdown-menu-right ">

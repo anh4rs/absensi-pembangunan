@@ -89,7 +89,7 @@ $autoload['drivers'] = array();
 |
 |	$autoload['helper'] = array('url', 'file');
 */
-$autoload['helper'] = array('url','tanggal');
+$autoload['helper'] = array('url','tanggal','obiw');
 
 /*
 | -------------------------------------------------------------------
@@ -129,7 +129,8 @@ $autoload['language'] = array();
 |
 | You can also supply an alternative model name to be assigned
 | in the controller:
-|
+|$this->load->model("login_model");
+		$this->load->model("absen_model");
 |	$autoload['model'] = array('first_model' => 'first');
 */
-$autoload['model'] = array();
+$autoload['model'] = array('login_model','absen_model');
