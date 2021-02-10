@@ -24,7 +24,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="exampleModalLabel">Riwayat Pengeditan</h5>
-            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <button class="close" type="button" data-dismiss="modal" onClick="hancur_tabel()" aria-label="Close">
                 <span aria-hidden="true">×</span>
             </button>
           </div>
@@ -35,7 +35,8 @@
 
           	</div>
           	<div class="row">
-          		<table class="table align-items-center table-flush " id="tabel-riwayat">
+              <div class="table-responsive table-hover">
+          		<table class="table align-items-center table-flush " style="width: 100%;  " id="tabel-riwayat">
           			<thead>
           				<tr>
           					<th scope="col" rowspan="2">Waktu</th>
@@ -63,8 +64,153 @@
           				
           			</tbody>
           		</table>
-          			<div id="bawah" class="text-center m-auto"></div>
+            </div>
           	</div>
+          </div>
+          <div class="modal-footer">
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="modal fade" id="modal-hadir"  role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-lg" style="max-width: 995px;" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Daftar Siswa yang Hadir</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="table-responsive table-hover">
+                <table class="table align-items-center table-flush " style="width: 100%;  " id="tabel-hadir">
+                    <thead>
+                        <tr>
+                            <th scope="col" >Nama</th>
+                        </tr>
+                                       
+                    </thead>
+                    <tbody id="isi-riwayat">
+                            <?php foreach ($hadir as $h) { ?>
+                                <tr>
+                                    <td> <?= $h['nama'] ?></td>
+                                </tr>
+                            <?php } ?>
+                    </tbody>
+                </table>
+            </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modal-sakit"  role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-lg" style="max-width: 995px;" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Daftar Siswa yang Sakit</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="table-responsive table-hover">
+                <table class="table align-items-center table-flush " style="width: 100%;  " id="tabel-sakit">
+                    <thead>
+                        <tr>
+                            <th scope="col" >Nama</th>
+                        </tr>
+                                       
+                    </thead>
+                    <tbody id="isi-riwayat">
+                            <?php foreach ($sakit as $s) { ?>
+                                <tr>
+                                    <td> <?= $s['nama'] ?></td>
+                                </tr>
+                            <?php } ?>
+                    </tbody>
+                </table>
+            </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modal-izin"  role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-lg" style="max-width: 995px;" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Daftar Siswa yang Izin</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="table-responsive table-hover">
+                <table class="table align-items-center table-flush " style="width: 100%;  " id="tabel-izin">
+                    <thead>
+                        <tr>
+                            <th scope="col" >Nama</th>
+                        </tr>
+                                       
+                    </thead>
+                    <tbody id="isi-riwayat">
+                            <?php foreach ($izin as $i) { ?>
+                                <tr>
+                                    <td> <?= $i['nama'] ?></td>
+                                </tr>
+                            <?php } ?>
+                    </tbody>
+                </table>
+            </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modal-alfa"  role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-lg" style="max-width: 995px;" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Daftar Siswa yang Alfa</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="table-responsive table-hover">
+                <table class="table align-items-center table-flush " style="width: 100%;  " id="tabel-alfa">
+                    <thead>
+                        <tr>
+                            <th scope="col" >Nama</th>
+                        </tr>
+                                       
+                    </thead>
+                    <tbody id="isi-riwayat">
+                            <?php foreach ($alfa as $a) { ?>
+                                <tr>
+                                    <td> <?= $a['nama'] ?></td>
+                                </tr>
+                            <?php } ?>
+                    </tbody>
+                </table>
+            </div>
+            </div>
           </div>
           <div class="modal-footer">
           </div>

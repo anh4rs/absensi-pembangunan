@@ -9,6 +9,7 @@ class Beranda extends CI_Controller {
    		$this->absen_model->input_otomatis();
 
 	}
+
 	public function index()
 	{	
 		
@@ -23,11 +24,22 @@ class Beranda extends CI_Controller {
 	        $data["absen"] = $this->absen_model->tampilkan_absen($this->session->userdata('kelas'));
 	        $data["user"] = $this->login_model->get_data_by_id($this->session->userdata('id'));
 	        $data["tampil_absen"] = $this->absen_model->tampil_kehadiran($this->session->userdata('kelas'));
-
+	        $data["jumlah_siswa"] = $this->absen_model->jumlah_absen($this->session->userdata('kelas'));
+	        
+			$data['jumlah'] = $this->absen_model->hitung(date("Y-m-d"));
+	        $data["hadir"] = $this->absen_model->nama_kehadiran('h', date("Y-m-d"));
+	        $data["sakit"] = $this->absen_model->nama_kehadiran('s', date("Y-m-d"));
+	        $data["izin"] = $this->absen_model->nama_kehadiran('i', date("Y-m-d"));
+	        $data["alfa"] = $this->absen_model->nama_kehadiran('a', date("Y-m-d"));
 
 			if($this->session->userdata('role') == "petugas") $this->load->view('petugas/beranda', $data);
 			elseif($this->session->userdata('role') == "wali") $this->load->view('wali/beranda', $data);
-			elseif($this->session->userdata('role') == "siswa") $this->load->view('siswa/beranda', $data);
+			elseif($this->session->userdata('role') == "siswa")
+			{
+				$data["absen"] = $this->absen_model->absensiPerOrang($this->session->userdata('id'));
+
+			 	$this->load->view('siswa/beranda', $data);
+			}
 			elseif($this->session->userdata('role') == "admin") $this->load->view('admin/beranda', $data);
 
 		}
@@ -73,12 +85,21 @@ class Beranda extends CI_Controller {
 
 	function test()
 	{
-			$data["absen"] = $this->absen_model->tampilkan_absen();
-	        $data["user"] = $this->login_model->get_data_by_id($this->session->userdata('id'));
-	        $data["tampil_absen"] = $this->absen_model->tampil_kehadiran();
+			// $data["absen"] = $this->absen_model->tampilkan_absen();
+	  //       $data["user"] = $this->login_model->get_data_by_id($this->session->userdata('id'));
+	  //       $data["tampil_absen"] = $this->absen_model->tampil_kehadiran();
 
 	        //echo json_encode($absen);
+		$jumlah = $this->absen_model->hitung(date("Y-m-d"));
+		echo '<pre>';
+       //$this->load->view('petugas/test', $data);
+		echo "hadir : ".$jumlah[0]."\n";
+		echo "sakit : ".$jumlah[1]."\n";
+		echo "izin : ".$jumlah[2]."\n";
+		echo "alfa : ".$jumlah[3]."\n";
+		echo "belum : ".$jumlah[4]."\n";
+		echo "</pre>";
 
-	       $this->load->view('petugas/test', $data);
+		//$absen = $this->absen_model->hitung() 
 	}
 }

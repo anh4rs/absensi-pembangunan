@@ -137,6 +137,47 @@ class Absen_model extends CI_Model
       return $query->result_array();
     }
 
+    function hitung($tgl)
+    {
+      $absen = $this->absensiDanKehadiran($tgl);
+
+      $h = 0;
+      $s = 0;
+      $i = 0;
+      $a = 0;
+      $b = 0;
+      foreach ($absen as $siswa) 
+      {
+        if ($siswa['jam_1']=='h' || $siswa['jam_2']=='h' ||$siswa['jam_3']=='h' || $siswa['jam_4']=='h' ||$siswa['jam_5']=='h'||$siswa['jam_6']=='h'||$siswa['jam_7']=='h'||$siswa['jam_8']=='h'||$siswa['jam_9']=='h'||$siswa['jam_10']=='h'||$siswa['jam_11']=='h'||$siswa['jam_12']=='h' || $siswa['jam_13']=='h' ||$siswa['jam_14']=='h') $h++;
+
+        if ($siswa['jam_1']=='s' || $siswa['jam_2']=='s' ||$siswa['jam_3']=='s' || $siswa['jam_4']=='s' ||$siswa['jam_5']=='s'||$siswa['jam_6']=='s'||$siswa['jam_7']=='s'||$siswa['jam_8']=='s'||$siswa['jam_9']=='s'||$siswa['jam_10']=='s'||$siswa['jam_11']=='s'||$siswa['jam_12']=='s' || $siswa['jam_13']=='s' ||$siswa['jam_14']=='s') $s++;
+        
+        if ($siswa['jam_1']=='i' || $siswa['jam_2']=='i' ||$siswa['jam_3']=='i' || $siswa['jam_4']=='i' ||$siswa['jam_5']=='i'||$siswa['jam_6']=='i'||$siswa['jam_7']=='i'||$siswa['jam_8']=='i'||$siswa['jam_9']=='i'||$siswa['jam_10']=='i'||$siswa['jam_11']=='i'||$siswa['jam_12']=='i' || $siswa['jam_13']=='i' ||$siswa['jam_14']=='i') $i++;
+
+        if ($siswa['jam_1']=='a' || $siswa['jam_2']=='a' ||$siswa['jam_3']=='a' || $siswa['jam_4']=='a' ||$siswa['jam_5']=='a'||$siswa['jam_6']=='a'||$siswa['jam_7']=='a'||$siswa['jam_8']=='a'||$siswa['jam_9']=='a'||$siswa['jam_10']=='a'||$siswa['jam_11']=='a'||$siswa['jam_12']=='a' || $siswa['jam_13']=='a' ||$siswa['jam_14']=='a') $a++;
+
+        if ($siswa['jam_1']=='' || $siswa['jam_2']=='' ||$siswa['jam_3']=='' || $siswa['jam_4']=='' ||$siswa['jam_5']==''||$siswa['jam_6']==''||$siswa['jam_7']==''||$siswa['jam_8']==''||$siswa['jam_9']==''||$siswa['jam_10']==''||$siswa['jam_11']==''||$siswa['jam_12']=='' || $siswa['jam_13']=='' ||$siswa['jam_14']=='') $b++;
+               
+      }
+      $hasil[0] = $h;
+      $hasil[1] = $s;
+      $hasil[2] = $i;
+      $hasil[3] = $a;
+      $hasil[4] = $b;
+
+      return $hasil;
+    }
+
+    function nama_kehadiran($ket,$tgl)
+    {
+      $this->db->select('b.nama');
+      $this->db->from('biodata AS b');
+      $this->db->join('kehadiran AS k','b.id_user=k.id_user');
+      $this->db->where("k.tgl='$tgl' AND (k.jam_1='$ket' OR k.jam_2='$ket' OR k.jam_3='$ket' OR  k.jam_4='$ket' OR k.jam_5='$ket' OR k.jam_6='$ket' OR  k.jam_7='$ket' OR k.jam_8='$ket' OR k.jam_9='$ket' OR k.jam_10='$ket' OR k.jam_11='$ket' OR k.jam_12='$ket' OR k.jam_13='$ket' OR k.jam_14='$ket' )");
+      $query = $this->db->get();
+      return $query->result_array();
+    }
+
     //fungsi otomatis insert kalau ganti hari
     function input_otomatis()
     {
@@ -168,8 +209,40 @@ class Absen_model extends CI_Model
     }
 
 
+    function pengajuan()
+    {
+      $this->db->select('kehadiran.*, biodata.nama, pengeditan.*');
+      $this->db->from('pengeditan');
+      $this->db->join('kehadiran', 'pengeditan.id_kehadiran=kehadiran.id_kehadiran');
+      $this->db->join('biodata', 'kehadiran.id_user=biodata.id_user');
+      $this->db->where('pengeditan.status','0');
+      $query = $this->db->get();
+      return $query->result_array();
+    }
 
+    function pengajuanById($id)
+    {
+      $this->db->select('kehadiran.*, biodata.nama, pengeditan.*');
+      $this->db->from('pengeditan');
+      $this->db->join('kehadiran', 'pengeditan.id_kehadiran=kehadiran.id_kehadiran');
+      $this->db->join('biodata', 'kehadiran.id_user=biodata.id_user');
+      $this->db->where('pengeditan.id', $id);
+      $query = $this->db->get();
+      return $query->result_array();
+    }
     
+    function absensiPerOrang($id)
+    {
+      $this->db->select('kehadiran.*');
+      $this->db->from('kehadiran');
+      $this->db->join('user','user.id=kehadiran.id_user');
+      $this->db->join('biodata','biodata.id_user=kehadiran.id_user');
+      $this->db->where("biodata.id_user='$id' AND (user.role = 'siswa' OR user.role='petugas')");
+      $this->db->order_by('kehadiran.tgl','desc');
 
+      $query = $this->db->get();
+      return $query->result_array();
+    
+    }
 
 }

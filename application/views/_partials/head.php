@@ -22,6 +22,7 @@
   <!-- Argon CSS -->
 <link rel="stylesheet" href="<?php echo base_url('assets/css/argon.css?v=1.2.0')?>" type="text/css">
 
+
 <style>
 	.no-js #loader { display: none;  }
 	.js #loader { display: block; position: absolute; left: 100px; top: 0; }

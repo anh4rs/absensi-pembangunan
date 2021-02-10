@@ -14,12 +14,13 @@
 <script src="<?php echo base_url('assets/vendor/chart.js/dist/Chart.extension.js')?>"></script>
 
 <!-- Argon JS -->
+<script src="<?php echo base_url('assets/vendor/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js')?>"></script>
 <script src="<?php echo base_url('assets/js/argon.js?v=1.2.0') ?>"></script>
 
-<script src="<?php echo base_url('assets/vendor/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js')?>"></script>
 
 <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
 <script>
+	
 	$(document).ready(function(){
 		$(".se-pre-con").fadeOut(2000);
 	});

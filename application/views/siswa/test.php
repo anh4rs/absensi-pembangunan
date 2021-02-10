@@ -30,7 +30,7 @@
 	<?php //$this->load->view('_partials/sidenav') ?>
   <!-- Main content -->
   <div class="main-content" id="panel">
-    <?php $this->load->view('_partials/topnavWali') ?>
+    <?php $this->load->view('_partials/topnavPetugas') ?>
 
     <!-- Header -->
     <div class="header bg-gradient-primary pb-6">
@@ -47,39 +47,35 @@
           <!-- Card stats -->
           <div class="row">
             <div class="col-xl-3 col-md-6">
-              <a href="#" data-toggle="modal" data-target="#modal-hadir" class="font-weight-bold ml-1" target="_blank">
               <div class="card card-stats">
                 <!-- Card body -->
                 <div class="card-body">
                   <div class="row">
                     <div class="col">
                       <h5 class="card-title text-uppercase text-muted mb-0">Jumlah Siswa Hadir</h5>
-                      <span class="h2 font-weight-bold mb-0"><?= $jumlah[0]?>  Siswa</span>
+                      <span class="h2 font-weight-bold mb-0">33 Siswa</span>
                     </div>
                     <div class="col-auto">
-                        <div class="icon icon-shape bg-gradient-red text-white rounded-circle shadow">
-                          <i class="ni ni-check-bold"></i>
-                        </div>
+                      <div class="icon icon-shape bg-gradient-red text-white rounded-circle shadow">
+                        <i class="ni ni-check-bold"></i>
+                      </div>
                     </div>
                   </div>
                   <p class="mt-3 mb-0 text-sm">
-                    <span class="text-success mr-2"><?= round($jumlah[0]/$jumlah_siswa*100, 2)?>%</span>
-                    <span class="text-nowrap">Masuk dari <?= $jumlah_siswa?> Siswa</span>
+                    <span class="text-success mr-2">100%</span>
+                    <span class="text-nowrap">Masuk dari 33 Siswa</span>
                   </p>
                 </div>
               </div>
-                </a>
             </div>
             <div class="col-xl-3 col-md-6">
-              <a href="#" data-toggle="modal" data-target="#modal-sakit" class="font-weight-bold ml-1" target="_blank">
-
               <div class="card card-stats">
                 <!-- Card body -->
                 <div class="card-body">
                   <div class="row">
                     <div class="col">
                       <h5 class="card-title text-uppercase text-muted mb-0">Jumlah Siswa Sakit</h5>
-                      <span class="h2 font-weight-bold mb-0"><?= $jumlah[1]?> Siswa</span>
+                      <span class="h2 font-weight-bold mb-0">0 Siswa</span>
                     </div>
                     <div class="col-auto">
                       <div class="icon icon-shape bg-gradient-orange text-white rounded-circle shadow">
@@ -88,23 +84,20 @@
                     </div>
                   </div>
                   <p class="mt-3 mb-0 text-sm">
-                    <span class="text-success mr-2"><?= round($jumlah[1]/$jumlah_siswa*100, 2)?>%</span>
-                    <span class="text-nowrap">Siswa Sakit dari <?= $jumlah_siswa?> siswa</span>
+                    <span class="text-success mr-2">0%</span>
+                    <span class="text-nowrap">Siswa Sakit dari 33 siswa</span>
                   </p>
                 </div>
               </div>
-            </a>
             </div>
             <div class="col-xl-3 col-md-6">
-              <a href="#" data-toggle="modal" data-target="#modal-izin" class="font-weight-bold ml-1" target="_blank">
-
               <div class="card card-stats">
                 <!-- Card body -->
                 <div class="card-body">
                   <div class="row">
                     <div class="col">
                       <h5 class="card-title text-uppercase text-muted mb-0">Jumlah Siswa Izin</h5>
-                      <span class="h2 font-weight-bold mb-0"><?= $jumlah[2]?> Siswa</span>
+                      <span class="h2 font-weight-bold mb-0">0 Siswa</span>
                     </div>
                     <div class="col-auto">
                       <div class="icon icon-shape bg-gradient-green text-white rounded-circle shadow">
@@ -113,22 +106,20 @@
                     </div>
                   </div>
                   <p class="mt-3 mb-0 text-sm">
-                    <span class="text-success mr-2"><?= round($jumlah[2]/$jumlah_siswa*100, 2)?>%</span>
-                    <span class="text-nowrap">Siswa izin Dari <?= $jumlah_siswa?> Siswa</span>
+                    <span class="text-success mr-2">0%</span>
+                    <span class="text-nowrap">Siswa izin Dari 33 Siswa</span>
                   </p>
                 </div>
               </div>
-            </a>
             </div>
             <div class="col-xl-3 col-md-6">
-            <a href="#" data-toggle="modal" data-target="#modal-alfa" class="font-weight-bold ml-1" target="_blank">
               <div class="card card-stats">
                 <!-- Card body -->
                 <div class="card-body">
                   <div class="row">
                     <div class="col">
                       <h5 class="card-title text-uppercase text-muted mb-0">Jumlah Siswa Alfa</h5>
-                      <span class="h2 font-weight-bold mb-0"><?= $jumlah[3]?> Siswa</span>
+                      <span class="h2 font-weight-bold mb-0">0 Siswa</span>
                     </div>
                     <div class="col-auto">
                       <div class="icon icon-shape bg-gradient-info text-white rounded-circle shadow">
@@ -137,12 +128,11 @@
                     </div>
                   </div>
                   <p class="mt-3 mb-0 text-sm">
-                    <span class="text-success mr-2"><?= round($jumlah[3]/$jumlah_siswa*100, 2)?>%</span>
-                    <span class="text-nowrap">Siswa Alfa dari <?= $jumlah_siswa?> Siswa</span>
+                    <span class="text-success mr-2">0%</span>
+                    <span class="text-nowrap">Siswa Alfa dari 33 Siswa</span>
                   </p>
                 </div>
               </div>
-            </a>
             </div>
           </div>
         </div>
@@ -209,128 +199,128 @@
                     <form>
                       <td class="m-0 p-1">
                       	<select class=" form-control-sm"  name="<?php echo $siswa['id'] ?>_1">		
-							<option <?= $pilih = $tampil_absen[$nomer]['jam_1']== "" ? "selected" : ""  ?> value="">..</option>
-                          	<option <?= $pilih = $tampil_absen[$nomer]['jam_1']== "h" ? "selected" : ""     ?> value="h">H</option>                     		
-                      		<option <?= $pilih = $tampil_absen[$nomer]['jam_1']== "s" ? "selected" : ""     ?> value="s">S</option>
-							<option <?= $pilih = $tampil_absen[$nomer]['jam_1']== "i" ? "selected" : ""     ?> value="i">I</option>
-                      		<option <?= $pilih = $tampil_absen[$nomer]['jam_1']== "a" ? "selected" : ""     ?> value="a">A</option>
+							<option <?= $pilih = $tampil_absen[$nomer]['1']== "" ? "selected" : ""  ?> value="">..</option>
+                          	<option <?= $pilih = $tampil_absen[$nomer]['1']== "h" ? "selected" : ""     ?> value="h">H</option>                     		
+                      		<option <?= $pilih = $tampil_absen[$nomer]['1']== "s" ? "selected" : ""     ?> value="s">S</option>
+							<option <?= $pilih = $tampil_absen[$nomer]['1']== "i" ? "selected" : ""     ?> value="i">I</option>
+                      		<option <?= $pilih = $tampil_absen[$nomer]['1']== "a" ? "selected" : ""     ?> value="a">A</option>
                       	</select> 
                       </td>
                       <td class="m-0 p-1">
                       	<select class=" form-control-sm" name="<?php echo $siswa['id'] ?>_2">
-                      		<option <?= $pilih = $tampil_absen[$nomer]['jam_2']== ""  ? "selected" : ""     ?> value="">..</option>
-                          	<option <?= $pilih = $tampil_absen[$nomer]['jam_2']== "h" ? "selected" : ""     ?> value="h">H</option>
-                      		<option <?= $pilih = $tampil_absen[$nomer]['jam_2']== "s" ? "selected" : ""     ?> value="s">S</option>
-                       		<option <?= $pilih = $tampil_absen[$nomer]['jam_2']== "i" ? "selected" : ""     ?> value="i">I</option>
-                     	  	<option <?= $pilih = $tampil_absen[$nomer]['jam_2']== "a" ? "selected" : ""     ?> value="a">A</option>
+                      		<option <?= $pilih = $tampil_absen[$nomer]['2']== ""  ? "selected" : ""     ?> value="">..</option>
+                          	<option <?= $pilih = $tampil_absen[$nomer]['2']== "h" ? "selected" : ""     ?> value="h">H</option>
+                      		<option <?= $pilih = $tampil_absen[$nomer]['2']== "s" ? "selected" : ""     ?> value="s">S</option>
+                       		<option <?= $pilih = $tampil_absen[$nomer]['2']== "i" ? "selected" : ""     ?> value="i">I</option>
+                     	  	<option <?= $pilih = $tampil_absen[$nomer]['2']== "a" ? "selected" : ""     ?> value="a">A</option>
                       	</select> 
                       </td>
                       <td class="m-0 p-1">
                      	  <select class=" form-control-sm" name="<?php echo $siswa['id'] ?>_3">
-                     		<option <?= $pilih = $tampil_absen[$nomer]['jam_3']== ""  ? "selected" : ""     ?> value="">..</option>
-                         	<option <?= $pilih = $tampil_absen[$nomer]['jam_3']== "h"  ? "selected" : ""     ?> value="h">H</option>
-                     		<option <?= $pilih = $tampil_absen[$nomer]['jam_3']== "s"  ? "selected" : ""     ?> value="s">S</option>
-                     		<option <?= $pilih = $tampil_absen[$nomer]['jam_3']== "i"  ? "selected" : ""     ?> value="i">I</option>
-                     		<option <?= $pilih = $tampil_absen[$nomer]['jam_3']== "a"  ? "selected" : ""     ?> value="a">A</option>
+                     		<option <?= $pilih = $tampil_absen[$nomer]['3']== ""  ? "selected" : ""     ?> value="">..</option>
+                         	<option <?= $pilih = $tampil_absen[$nomer]['3']== "h"  ? "selected" : ""     ?> value="h">H</option>
+                     		<option <?= $pilih = $tampil_absen[$nomer]['3']== "s"  ? "selected" : ""     ?> value="s">S</option>
+                     		<option <?= $pilih = $tampil_absen[$nomer]['3']== "i"  ? "selected" : ""     ?> value="i">I</option>
+                     		<option <?= $pilih = $tampil_absen[$nomer]['3']== "a"  ? "selected" : ""     ?> value="a">A</option>
                      	  </select> 
                       </td>
                       <td class="m-0 p-1">
                      	  <select class=" form-control-sm" name="<?php echo $siswa['id'] ?>_4">
-                     	  	<option <?= $pilih = $tampil_absen[$nomer]['jam_4']== ""  ? "selected" : ""     ?> value="">..</option>
-                          	<option <?= $pilih = $tampil_absen[$nomer]['jam_4']== "h"  ? "selected" : ""     ?> value="h">H</option>
-                     	  	<option <?= $pilih = $tampil_absen[$nomer]['jam_4']== "s"  ? "selected" : ""     ?> value="s">S</option>
-                     	  	<option <?= $pilih = $tampil_absen[$nomer]['jam_4']== "i"  ? "selected" : ""     ?> value="i">I</option>
-                     	  	<option <?= $pilih = $tampil_absen[$nomer]['jam_4']== "a"  ? "selected" : ""     ?> value="a">A</option>
+                     	  	<option <?= $pilih = $tampil_absen[$nomer]['4']== ""  ? "selected" : ""     ?> value="">..</option>
+                          	<option <?= $pilih = $tampil_absen[$nomer]['4']== "h"  ? "selected" : ""     ?> value="h">H</option>
+                     	  	<option <?= $pilih = $tampil_absen[$nomer]['4']== "s"  ? "selected" : ""     ?> value="s">S</option>
+                     	  	<option <?= $pilih = $tampil_absen[$nomer]['4']== "i"  ? "selected" : ""     ?> value="i">I</option>
+                     	  	<option <?= $pilih = $tampil_absen[$nomer]['4']== "a"  ? "selected" : ""     ?> value="a">A</option>
                      	  </select> 
                       </td>
                       <td class="m-0 p-1">
                      	  <select class=" form-control-sm" name="<?php echo $siswa['id'] ?>_5">
-                     	  	<option <?= $pilih = $tampil_absen[$nomer]['jam_5']== ""  ? "selected" : ""     ?> value="">..</option>
-                          	<option <?= $pilih = $tampil_absen[$nomer]['jam_5']== "h"  ? "selected" : ""     ?> value="h">H</option>
-                     	  	<option <?= $pilih = $tampil_absen[$nomer]['jam_5']== "s"  ? "selected" : ""     ?> value="s">S</option>
-                     	  	<option <?= $pilih = $tampil_absen[$nomer]['jam_5']== "i"  ? "selected" : ""     ?> value="i">I</option>
-                     	  	<option <?= $pilih = $tampil_absen[$nomer]['jam_5']== "a"  ? "selected" : ""     ?> value="a">A</option>
+                     	  	<option <?= $pilih = $tampil_absen[$nomer]['5']== ""  ? "selected" : ""     ?> value="">..</option>
+                          	<option <?= $pilih = $tampil_absen[$nomer]['5']== "h"  ? "selected" : ""     ?> value="h">H</option>
+                     	  	<option <?= $pilih = $tampil_absen[$nomer]['5']== "s"  ? "selected" : ""     ?> value="s">S</option>
+                     	  	<option <?= $pilih = $tampil_absen[$nomer]['5']== "i"  ? "selected" : ""     ?> value="i">I</option>
+                     	  	<option <?= $pilih = $tampil_absen[$nomer]['5']== "a"  ? "selected" : ""     ?> value="a">A</option>
                      	  </select> 
                       </td>
                       <td class="m-0 p-1">
                      	  <select class=" form-control-sm" name="<?php echo $siswa['id'] ?>_6">
-                     	    <option <?= $pilih = $tampil_absen[$nomer]['jam_6']== ""  ? "selected" : ""     ?> value="">..</option>
-                          	<option <?= $pilih = $tampil_absen[$nomer]['jam_6']== "h"  ? "selected" : ""     ?> value="h">H</option>
-                     		<option <?= $pilih = $tampil_absen[$nomer]['jam_6']== "s"  ? "selected" : ""     ?> value="s">S</option>
-                     	  	<option <?= $pilih = $tampil_absen[$nomer]['jam_6']== "i"  ? "selected" : ""     ?> value="i">I</option>
-                     	  	<option <?= $pilih = $tampil_absen[$nomer]['jam_6']== "a"  ? "selected" : ""     ?> value="a">A</option>
+                     	    <option <?= $pilih = $tampil_absen[$nomer]['6']== ""  ? "selected" : ""     ?> value="">..</option>
+                          	<option <?= $pilih = $tampil_absen[$nomer]['6']== "h"  ? "selected" : ""     ?> value="h">H</option>
+                     		<option <?= $pilih = $tampil_absen[$nomer]['6']== "s"  ? "selected" : ""     ?> value="s">S</option>
+                     	  	<option <?= $pilih = $tampil_absen[$nomer]['6']== "i"  ? "selected" : ""     ?> value="i">I</option>
+                     	  	<option <?= $pilih = $tampil_absen[$nomer]['6']== "a"  ? "selected" : ""     ?> value="a">A</option>
                       	</select> 
                       </td>
                       <td class="m-0 p-1">
                      	  <select class=" form-control-sm" name="<?php echo $siswa['id'] ?>_7">
-                     		<option <?= $pilih = $tampil_absen[$nomer]['jam_7']== ""  ? "selected" : ""     ?> value="">..</option>
-                         	<option <?= $pilih = $tampil_absen[$nomer]['jam_7']== "h"  ? "selected" : ""     ?> value="h">H</option>
-                     		<option <?= $pilih = $tampil_absen[$nomer]['jam_7']== "s"  ? "selected" : ""     ?> value="s">S</option>
-                     		<option <?= $pilih = $tampil_absen[$nomer]['jam_7']== "i"  ? "selected" : ""     ?> value="i">I</option>
-                     		<option <?= $pilih = $tampil_absen[$nomer]['jam_7']== "a"  ? "selected" : ""     ?> value="a">A</option>
+                     		<option <?= $pilih = $tampil_absen[$nomer]['7']== ""  ? "selected" : ""     ?> value="">..</option>
+                         	<option <?= $pilih = $tampil_absen[$nomer]['7']== "h"  ? "selected" : ""     ?> value="h">H</option>
+                     		<option <?= $pilih = $tampil_absen[$nomer]['7']== "s"  ? "selected" : ""     ?> value="s">S</option>
+                     		<option <?= $pilih = $tampil_absen[$nomer]['7']== "i"  ? "selected" : ""     ?> value="i">I</option>
+                     		<option <?= $pilih = $tampil_absen[$nomer]['7']== "a"  ? "selected" : ""     ?> value="a">A</option>
                      	  </select> 
                       </td>
                       <td class="m-0 p-1">
                      	  <select class=" form-control-sm" name="<?php echo $siswa['id'] ?>_8">
-                     		 <option <?= $pilih = $tampil_absen[$nomer]['jam_8']== ""  ? "selected" : ""     ?> value="">..</option>
-                        	 <option <?= $pilih = $tampil_absen[$nomer]['jam_8']== "h"  ? "selected" : ""     ?> value="h" >H</option>
-                     		 <option <?= $pilih = $tampil_absen[$nomer]['jam_8']== "s"  ? "selected" : ""     ?> value="s">S</option>
-                     		 <option <?= $pilih = $tampil_absen[$nomer]['jam_8']== "i"  ? "selected" : ""     ?> value="i">I</option>
-                     		 <option <?= $pilih = $tampil_absen[$nomer]['jam_8']== "a"  ? "selected" : ""     ?> value="a">A</option>
+                     		 <option <?= $pilih = $tampil_absen[$nomer]['8']== ""  ? "selected" : ""     ?> value="">..</option>
+                        	 <option <?= $pilih = $tampil_absen[$nomer]['8']== "h"  ? "selected" : ""     ?> value="h" >H</option>
+                     		 <option <?= $pilih = $tampil_absen[$nomer]['8']== "s"  ? "selected" : ""     ?> value="s">S</option>
+                     		 <option <?= $pilih = $tampil_absen[$nomer]['8']== "i"  ? "selected" : ""     ?> value="i">I</option>
+                     		 <option <?= $pilih = $tampil_absen[$nomer]['8']== "a"  ? "selected" : ""     ?> value="a">A</option>
                      	  </select> 
                       </td>
                       <td class="m-0 p-1">
                      	  <select class=" form-control-sm" name="<?php echo $siswa['id'] ?>_9">
-                     		 <option <?= $pilih = $tampil_absen[$nomer]['jam_9']== ""  ? "selected" : ""     ?> value="">..</option>
-                        	 <option <?= $pilih = $tampil_absen[$nomer]['jam_9']== "h"  ? "selected" : ""     ?> value="h" >H</option>
-                     		 <option <?= $pilih = $tampil_absen[$nomer]['jam_9']== "s"  ? "selected" : ""     ?> value="s">S</option>
-                     		 <option <?= $pilih = $tampil_absen[$nomer]['jam_9']== "i"  ? "selected" : ""     ?> value="i">I</option>
-                     		 <option <?= $pilih = $tampil_absen[$nomer]['jam_9']== "a"  ? "selected" : ""     ?> value="a">A</option>
+                     		 <option <?= $pilih = $tampil_absen[$nomer]['9']== ""  ? "selected" : ""     ?> value="">..</option>
+                        	 <option <?= $pilih = $tampil_absen[$nomer]['9']== "h"  ? "selected" : ""     ?> value="h" >H</option>
+                     		 <option <?= $pilih = $tampil_absen[$nomer]['9']== "s"  ? "selected" : ""     ?> value="s">S</option>
+                     		 <option <?= $pilih = $tampil_absen[$nomer]['9']== "i"  ? "selected" : ""     ?> value="i">I</option>
+                     		 <option <?= $pilih = $tampil_absen[$nomer]['9']== "a"  ? "selected" : ""     ?> value="a">A</option>
                      	  </select> 
                       </td>
                       <td class="m-0 p-1">
                      	  <select class=" form-control-sm" name="<?php echo $siswa['id'] ?>_10">
-                     		 <option <?= $pilih = $tampil_absen[$nomer]['jam_10']== ""  ? "selected" : ""     ?> value="">..</option>
-                        	 <option <?= $pilih = $tampil_absen[$nomer]['jam_10']== "h"  ? "selected" : ""     ?> value="h" >H</option>
-                     		 <option <?= $pilih = $tampil_absen[$nomer]['jam_10']== "s"  ? "selected" : ""     ?> value="s">S</option>
-                     		 <option <?= $pilih = $tampil_absen[$nomer]['jam_10']== "i"  ? "selected" : ""     ?> value="i">I</option>
-                     		 <option <?= $pilih = $tampil_absen[$nomer]['jam_10']== "a"  ? "selected" : ""     ?> value="a">A</option>
+                     		 <option <?= $pilih = $tampil_absen[$nomer]['10']== ""  ? "selected" : ""     ?> value="">..</option>
+                        	 <option <?= $pilih = $tampil_absen[$nomer]['10']== "h"  ? "selected" : ""     ?> value="h" >H</option>
+                     		 <option <?= $pilih = $tampil_absen[$nomer]['10']== "s"  ? "selected" : ""     ?> value="s">S</option>
+                     		 <option <?= $pilih = $tampil_absen[$nomer]['10']== "i"  ? "selected" : ""     ?> value="i">I</option>
+                     		 <option <?= $pilih = $tampil_absen[$nomer]['10']== "a"  ? "selected" : ""     ?> value="a">A</option>
                      	  </select> 
                       </td>
                       <td class="m-0 p-1">
                      	  <select class=" form-control-sm" name="<?php echo $siswa['id'] ?>_11">
-                     		 <option <?= $pilih = $tampil_absen[$nomer]['jam_11']== ""  ? "selected" : ""     ?> value="">..</option>
-                        	 <option <?= $pilih = $tampil_absen[$nomer]['jam_11']== "h"  ? "selected" : ""     ?> value="h" >H</option>
-                     		 <option <?= $pilih = $tampil_absen[$nomer]['jam_11']== "s"  ? "selected" : ""     ?> value="s">S</option>
-                     		 <option <?= $pilih = $tampil_absen[$nomer]['jam_11']== "i"  ? "selected" : ""     ?> value="i">I</option>
-                     		 <option <?= $pilih = $tampil_absen[$nomer]['jam_11']== "a"  ? "selected" : ""     ?> value="a">A</option>
+                     		 <option <?= $pilih = $tampil_absen[$nomer]['11']== ""  ? "selected" : ""     ?> value="">..</option>
+                        	 <option <?= $pilih = $tampil_absen[$nomer]['11']== "h"  ? "selected" : ""     ?> value="h" >H</option>
+                     		 <option <?= $pilih = $tampil_absen[$nomer]['11']== "s"  ? "selected" : ""     ?> value="s">S</option>
+                     		 <option <?= $pilih = $tampil_absen[$nomer]['11']== "i"  ? "selected" : ""     ?> value="i">I</option>
+                     		 <option <?= $pilih = $tampil_absen[$nomer]['11']== "a"  ? "selected" : ""     ?> value="a">A</option>
                      	  </select> 
                       </td>
                       <td class="m-0 p-1">
                      	  <select class=" form-control-sm" name="<?php echo $siswa['id'] ?>_12">
-                     		 <option <?= $pilih = $tampil_absen[$nomer]['jam_12']== ""  ? "selected" : ""     ?> value="">..</option>
-                        	 <option <?= $pilih = $tampil_absen[$nomer]['jam_12']== "h"  ? "selected" : ""     ?> value="h" >H</option>
-                     		 <option <?= $pilih = $tampil_absen[$nomer]['jam_12']== "s"  ? "selected" : ""     ?> value="s">S</option>
-                     		 <option <?= $pilih = $tampil_absen[$nomer]['jam_12']== "i"  ? "selected" : ""     ?> value="i">I</option>
-                     		 <option <?= $pilih = $tampil_absen[$nomer]['jam_12']== "a"  ? "selected" : ""     ?> value="a">A</option>
+                     		 <option <?= $pilih = $tampil_absen[$nomer]['12']== ""  ? "selected" : ""     ?> value="">..</option>
+                        	 <option <?= $pilih = $tampil_absen[$nomer]['12']== "h"  ? "selected" : ""     ?> value="h" >H</option>
+                     		 <option <?= $pilih = $tampil_absen[$nomer]['12']== "s"  ? "selected" : ""     ?> value="s">S</option>
+                     		 <option <?= $pilih = $tampil_absen[$nomer]['12']== "i"  ? "selected" : ""     ?> value="i">I</option>
+                     		 <option <?= $pilih = $tampil_absen[$nomer]['12']== "a"  ? "selected" : ""     ?> value="a">A</option>
                      	  </select> 
                       </td>
                       <td class="m-0 p-1">
                      	  <select class=" form-control-sm" name="<?php echo $siswa['id'] ?>_13">
-                     		 <option <?= $pilih = $tampil_absen[$nomer]['jam_13']== ""  ? "selected" : ""     ?> value="">..</option>
-                        	 <option <?= $pilih = $tampil_absen[$nomer]['jam_13']== "h"  ? "selected" : ""     ?> value="h" >H</option>
-                     		 <option <?= $pilih = $tampil_absen[$nomer]['jam_13']== "s"  ? "selected" : ""     ?> value="s">S</option>
-                     		 <option <?= $pilih = $tampil_absen[$nomer]['jam_13']== "i"  ? "selected" : ""     ?> value="i">I</option>
-                     		 <option <?= $pilih = $tampil_absen[$nomer]['jam_13']== "a"  ? "selected" : ""     ?> value="a">A</option>
+                     		 <option <?= $pilih = $tampil_absen[$nomer]['13']== ""  ? "selected" : ""     ?> value="">..</option>
+                        	 <option <?= $pilih = $tampil_absen[$nomer]['13']== "h"  ? "selected" : ""     ?> value="h" >H</option>
+                     		 <option <?= $pilih = $tampil_absen[$nomer]['13']== "s"  ? "selected" : ""     ?> value="s">S</option>
+                     		 <option <?= $pilih = $tampil_absen[$nomer]['13']== "i"  ? "selected" : ""     ?> value="i">I</option>
+                     		 <option <?= $pilih = $tampil_absen[$nomer]['13']== "a"  ? "selected" : ""     ?> value="a">A</option>
                      	  </select> 
                       </td>
                       <td class="m-0 p-1">
                      	  <select class=" form-control-sm" name="<?php echo $siswa['id'] ?>_14"> 
-                     		 <option <?= $pilih = $tampil_absen[$nomer]['jam_14']== ""  ? "selected" : ""     ?> value="">..</option>
-                        	 <option <?= $pilih = $tampil_absen[$nomer]['jam_14']== "h"  ? "selected" : ""     ?> value="h" >H</option>
-                     		 <option <?= $pilih = $tampil_absen[$nomer]['jam_14']== "s"  ? "selected" : ""     ?> value="s">S</option>
-                     		 <option <?= $pilih = $tampil_absen[$nomer]['jam_14']== "i"  ? "selected" : ""     ?> value="i">I</option>
-                     		 <option <?= $pilih = $tampil_absen[$nomer]['jam_14']== "a"  ? "selected" : ""     ?> value="a">A</option>
+                     		 <option <?= $pilih = $tampil_absen[$nomer]['14']== ""  ? "selected" : ""     ?> value="">..</option>
+                        	 <option <?= $pilih = $tampil_absen[$nomer]['14']== "h"  ? "selected" : ""     ?> value="h" >H</option>
+                     		 <option <?= $pilih = $tampil_absen[$nomer]['14']== "s"  ? "selected" : ""     ?> value="s">S</option>
+                     		 <option <?= $pilih = $tampil_absen[$nomer]['14']== "i"  ? "selected" : ""     ?> value="i">I</option>
+                     		 <option <?= $pilih = $tampil_absen[$nomer]['14']== "a"  ? "selected" : ""     ?> value="a">A</option>
                      	  </select> 
                       </td>
                     </form>
@@ -386,12 +376,10 @@
 		<script type="text/javascript" charset="utf8" src="<?php echo base_url('assets/vendor/datatables.baru/datatables.js')?>"></script>
 
 		<script type="text/javascript" >
+        $(".se-pre-con").fadeOut();
 			$(document).ready( function () {
-        $('#tabel-hadir').dataTable();
-        $('#tabel-sakit').dataTable();
-        $('#tabel-izin').dataTable();
-        $('#tabel-alfa').dataTable();
-				var absen = <?= json_encode($absen)?> ;
+
+        var absen = <?= json_encode($absen)?> ;
 				
 				for(var i=0 ; i < absen.length ; i++)
 				{
@@ -419,64 +407,16 @@
           								action: function ( e, dt, node, config ) 
           								{
             								table.$("select").prop("disabled",false);
-            								var data = table.$('select').serializeArray();
-
+                            
+                            var opt = table.$('select option:selected').map(function(i,v) {
+                              return this.value;
+                            }).get(); // result is array
+                            
+                            console.log( opt );
             								
-            								$.ajax({
-
-	             		 						url: "<?php echo site_url('beranda/simpan')?>",
-	              								type: "POST",
-	              								data: data,
-
-							              		success:function(response){
-
-								                if (response == "success")
-								                {
-								                  Swal.fire({
-								                    type: 'success',
-								                    title: 'Menyimpan Berhasil!',
-								                    text: '',
-								                    timer: 1000,
-								                    showCancelButton: false,
-								                    showConfirmButton: false
-								                  }).then (function() {
-								                    window.location.href = "<?php echo site_url('/beranda')?>";
-								                  });         
-								                } 
-								                else 
-								                {
-
-								                  Swal.fire({
-								                    type: 'error',
-								                    title: 'Menyimpan Gagal!',
-								                    text: ''
-								                  });
-
-
-								                }
-
-								                console.log(response);
-
-								              },
-
-								              error:function(response){
-
-								                  Swal.fire({
-								                    type: 'error',
-								                    title: 'Opps!',
-								                    text: 'server error!'
-								                  });
-
-								                  console.log(response);
-
-								              }
-
-
-								            });
-
-						          
-
-						          }
+                            var data = table.$('select').serializeArray(); 
+                            console.log(data);
+						              }
         		});
 
 				

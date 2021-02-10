@@ -30,17 +30,7 @@
                         <span class="nav-link-inner--text d-lg-none">Dashboard</span>
                     </a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link nav-link-icon" href="#" id="navbar-default_dropdown_1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="ni ni-bullet-list-67"></i>
-                        <span class="nav-link-inner--text d-lg-none">Pilihan</span>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbar-default_dropdown_1">
-                        <a class="dropdown-item" href="<?php echo site_url('edit') ?>">Edit Data Absensi</a>
-                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="<?php echo site_url('laporan') ?>">Laporan Data Absensi</a>
-                    </div>
-                </li>
+              
                 <li class="nav-item dropdown">
                     <a class="nav-link nav-link-icon" href="#" id="navbar-default_dropdown_2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="ni ni-single-02"></i>
@@ -48,8 +38,6 @@
                 </a>
 
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbar-default_dropdown_2">
-                        <a class="dropdown-item" href="<?php echo site_url('laporan/saya') ?>">Laporan Data Absensi Saya</a>
-                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="<?php echo site_url('profil') ?>">Profil Saya</a>
                     </div>
                 </li>
