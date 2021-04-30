@@ -9,7 +9,7 @@
         </div>
         <div class="col-xl-6">
           <ul class="nav nav-footer justify-content-center justify-content-xl-end">
-            XI SIJA A
+            XII SIJA A
           </ul>
         </div>
       </div>
